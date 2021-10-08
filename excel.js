@@ -25,24 +25,24 @@ for(let i=1;i<=100;i++)
 }
 
 // cells
-let cellData={
+let Data={
     "Sheet1":{}
 }
 
 let selectedsheet="Sheet1";
 let totalSheet=1;
 
-let deafaultProperties={
-    "font-family": "Noto Sans",
-  "font-size": 14,
-  "text": "",
-  "bold": false,
-  "italic": false,
-  "underlined": false,
-  "alignment": "left",
-  "color": "#444",
-  "bgcolor": "#fff",
-}
+// let deafaultProperties={
+//     "font-family": "Noto Sans",
+//   "font-size": 14,
+//   "text": "",
+//   "bold": false,
+//   "italic": false,
+//   "underlined": false,
+//   "alignment": "left",
+//   "color": "#444",
+//   "bgcolor": "#fff",
+// }
 
 
 for (let i = 1; i <= 100; i++) {
@@ -56,23 +56,6 @@ for (let i = 1; i <= 100; i++) {
 
 //to scroll
 
-$("#cells").scroll(function (e) {
-    $("#columns").scrollLeft(this.scrollLeft);
-    $("#rows").scrollTop(this.scrollTop);
-  });
-  
-  $(".input-cell").dblclick(function (e) {
-      $(".input-cell.selected").removeClass("selected top-selected bottom-selected left-selected right-selected")
- $(this).addClass("selected");
-      $(this).attr("contenteditable","true");
-    $(this).focus();
-  
-  })
-
-  $(".input-cell").blur(function(e) {
-      $(this).attr("contenteditable","false");
-      updateCellData("text", $(this).text());
-  })
 
   // to select multiple cells through keyboard
   $(".input-cell").click(function(e){
